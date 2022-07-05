@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "*.m": "matlab",
+        "cassert": "cpp",
+        "vector": "cpp",
+        "iterator": "cpp",
+        "array": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "queue": "cpp",
+        "xstring": "cpp",
+        "xutility": "cpp",
+        "format": "cpp"
+    }
+}

@@ -66,12 +66,6 @@ FundamentalMatrix fundamental_8_point (math::Matrix<double, 3, 8> const& points1
                          , math::Matrix<double, 3, 8> const& points2
                         ){
 
-    FundamentalMatrix F;
-    /** TODO HERE
-     * Coding Here!!
-     */
-    return F;
-#if 0
     /* direct linear transform */
     math::Matrix<double, 8, 9> A;
     for(int i=0; i<8; i++)
@@ -106,8 +100,6 @@ FundamentalMatrix fundamental_8_point (math::Matrix<double, 3, 8> const& points1
     F = U*S*V.transpose();
 
     return F;
-#endif
-
 }
 
 int main(int argc, char*argv[])

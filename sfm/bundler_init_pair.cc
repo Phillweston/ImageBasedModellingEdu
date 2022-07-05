@@ -46,6 +46,7 @@ InitialPair::compute_pair (Result* result)
     std::size_t found_pair_id = std::numeric_limits<std::size_t>::max();
     std::vector<float> pair_scores(candidates.size(), 0.0f);
 #pragma omp parallel for schedule(dynamic)
+    // 从匹配对最多的点开始
     for (std::size_t i = 0; i < candidates.size(); ++i)
     {
         if (found_pair)
@@ -73,6 +74,7 @@ InitialPair::compute_pair (Result* result)
 
         // 标准3：相机基线要足够长(用三角量测的夹角衡量）
         /* Compute initial pair pose. */
+        // 计算本质矩阵，
         CameraPose pose1, pose2;
         bool const found_pose = this->compute_pose(candidate, &pose1, &pose2);
         if (!found_pose) {

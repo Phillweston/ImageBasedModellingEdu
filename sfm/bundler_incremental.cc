@@ -294,6 +294,7 @@ Incremental::triangulate_new_tracks (int min_num_views)
         for (std::size_t j = 0; j < track.features.size(); ++j){
 
             int const view_id = track.features[j].view_id;
+            // 三角量测过程中需要知道相机的姿态，这里采集图像中的特征点坐标，至少需要两个视角
             if (!this->viewports->at(view_id).pose.is_valid())
                 continue;
             int const feature_id = track.features[j].feature_id;
