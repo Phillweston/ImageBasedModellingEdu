@@ -391,7 +391,7 @@ int main(int argc, char *argv[])
         std::exit(EXIT_FAILURE);
     }
 
-    /*利用估计的相机内参数进行去劲向畸变操作*/
+    /*利用估计的相机内参数进行去径向畸变操作*/
 #pragma omp parallel for schedule(dynamic,1)
     for (std::size_t i = 0; i < bundle_cams.size(); ++i){
         core::View::Ptr view = views[i];
