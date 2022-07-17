@@ -234,7 +234,7 @@ calculate_data_costs(core::TriangleMesh::ConstPtr mesh, std::vector<TextureView>
 
                 /* Calculate quality. */
                 texture_view->get_face_info(v1, v2, v3, &info, settings);
-
+                // info.quality数值越高说明越趋向于选择这个视角，越大则cost越小
                 if (info.quality == 0.0) continue;
 
                 /* Change color space. */
